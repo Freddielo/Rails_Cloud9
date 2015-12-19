@@ -1,0 +1,17 @@
+<p> Book name: </p><%= @book.name %>
+<p> Author: </p>
+ <%= @book.author %>
+<p> Price: </p>
+<%= @book.content %>
+<p> ISBN: </p>
+<%= @book.isbn %>
+<p> Description: </p>
+<%= @book.content %>
+
+
+<br><br><br>
+ <div style="width:100px; height:30px; background-color:red;">
+<div>
+
+ <%= render "comments/view" %>
+  <%= render "comments/showcomment" %>

@@ -1,0 +1,11 @@
+<h3>Comments:</h3>
+
+<% @book.comments.each do |comment| %>
+<table style="width:200px; height:30px; border: 1px solid red; ">
+  <tr>
+    <td><%= comment.bcomment %></td>
+  </tr>
+</table>
+
+
+<% end %>

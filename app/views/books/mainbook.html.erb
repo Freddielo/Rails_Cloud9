@@ -1,0 +1,26 @@
+
+
+<div class="center jumbotron"  style="background-color:white; margin-top:-75px;">
+ 
+  <h1> <%= image_tag("logo.png", width: '200', height: '150', alt: 'Site Logo') %>Chalupa-Batman</h1>
+<% if !logged_in? %>
+  <%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-primary" %>
+  <% end %>
+</div>
+
+
+
+<% @book.each do |book| %>
+<% my_class_name = "box" %>
+<div class="<%= my_class_name %>">
+  <li style="text-align:center; padding:55px;" >
+      <%= link_to book.name, book_detail_path(:id=>book.id)  %>
+      <p style="color:red;">$<%= book.price %></p>
+    </li>
+  </div>
+
+  
+  <br><br>
+    
+  <% end %>
+  
